@@ -33,30 +33,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>io.bastrikov</groupId>
-			<artifactId>customers</artifactId>
-			<version>0.0.1-20220318.144603-1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.bastrikov</groupId>
-			<artifactId>order-management</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>io.bastrikov</groupId>
-			<artifactId>customers</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
 	</dependencies>
-	<distributionManagement>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>a0op2c6byqm7r-artifactory-primary-0-snapshots</name>
-			<url>https://vitalybastrikov.jfrog.io/artifactory/bastrikov-libs-snapshot-local</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<build>
 		<plugins>

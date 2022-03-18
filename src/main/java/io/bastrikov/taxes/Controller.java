@@ -1,12 +1,22 @@
 package io.bastrikov.taxes;
 
 import io.bastrikov.taxes.models.TaxRequestEntity;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
+    @Value("${message}")
+    private String message;
+
+    @GetMapping("/hello")
+    public String test(){
+        return message;
+    }
+
     @PostMapping("/calculate")
     public double calculateTax(@RequestBody TaxRequestEntity request) {
         double locationMultiplier = calculateLocationMultiplier(request.getAddress().getCountry());
